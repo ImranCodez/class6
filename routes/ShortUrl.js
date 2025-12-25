@@ -1,13 +1,8 @@
 const express = require("express");
-const route = express.Router;
+const { CreateShortURl } = require("../Controllers/ShortneController");
+const { authmiddleware } = require("../middleware/authmiddleware");
+const router = express.Router();
 
+router.post("/create", authmiddleware, CreateShortURl);
 
-
-
-
-
-
-
-
-
-module.exports = route;
+module.exports = router;

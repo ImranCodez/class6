@@ -1,10 +1,10 @@
 const express = require("express");
-const { Singup, SingIn } = require("../Controllers/AuthController");
-const route = express.Router;
+const { singup, singin } = require("../Controllers/AuthController");
+const route = express.Router();
 // .Resistration part..........//
-route.get("/Singup",Singup)
+route.post("/Singup",singup)
 // ........Login part......//
-route.post("/singIn",SingIn)
+route.post("/singIn",singin)
 
 
 
